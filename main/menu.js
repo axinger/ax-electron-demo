@@ -16,7 +16,7 @@ var template = [
                           }
                     })// 事件
 
-                    win.loadFile('demo2.html')
+                    win.loadFile('view/subView.html')
                     win.on('close',()=>{
                         win = null;
                     })
