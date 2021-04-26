@@ -6,18 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
     electron 首页<br>
-
+    <button id='infoBtn'>查看系统变量</button><br>
     <button id='didBtn'>按钮读取文件</button><br>
     <button id='writeBtn'>按钮写入文件</button><br>
     <div id='allbabyDiv'></div><br>
-    <button id='crearNewPageBtn'>打开新window</button><br>
+    <button id='crearNewPageBtn'>打开新window</button><br> 用电脑浏览器打开
 
-    用电脑浏览器打开<br>
+    <br>
     <a id='aHref' href="https://www.baidu.com/">百度</a><br>
 
     <button id='openSubView'>打开子页面</button><br>
@@ -30,9 +32,26 @@
 
     <button id='msgBtn'>对话框</button><br>
 
-    <button id='noteBtn'>通知</button><br>
+    <button id='noteBtn'>通知</button><br> 被复制文字:
+    <input id="copyInput" type="text"><br> 粘贴文字:
+    <input id="pasteInput" type="text"><br>
+    <button id='codeBtn'>复制到粘贴板</button><br>
+
+    <div class="file_drag" id="id_file_drag_div">
+        <h2>file对象</h2>
+        <span>往这里拖文件</span>
+    </div>
+
+    <div>
+        <span>webview</span>
+        <!-- preload 注入脚本 -->
+        <webview id="id_webview" src="https://www.baidu.com/" preload="render/preload.js" />
+    </div>
+
     <!-- js -->
     <script src="render/index.js"></script>
+    <script type="text/javascript">
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,14 @@
+.file_drag {
+    width: 100%;
+    height: 200px;
+    background-color: aqua;
+}
+
+webview {
+    width: 100%;
+    height: 200px;
+}
+
+span {
+    color: red;
+}
